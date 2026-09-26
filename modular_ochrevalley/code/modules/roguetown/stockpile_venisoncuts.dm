@@ -41,7 +41,7 @@
 	name = "Boar Ham"
 	desc = "Delicious flesh carved from a wild boar, perfect for smoking or steaming."
 	item_type = /obj/item/reagent_containers/food/snacks/rogue/meat/ham/boar
-	trade_good_id = TRADE_GOOD_PORK
+	trade_good_id = TRADE_GOOD_MEAT_EXOTIC
 	importexport_amt = 5
 	stockpile_amount = 0
 	stockpile_limit = 20
