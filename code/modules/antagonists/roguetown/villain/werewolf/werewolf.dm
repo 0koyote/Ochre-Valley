@@ -8,7 +8,7 @@
 	job_rank = ROLE_WEREWOLF
 	storyteller_antag_flags = STORYTELLER_ANTAG_VILLAIN | STORYTELLER_ANTAG_ROUNDSTART
 	override_candidatereq = TRUE
-	storyteller_min_players = 25
+	storyteller_min_players = CHARACTER_INJECTION_MIN_POP //25 //OV EDIT
 	storyteller_slot_scaling = 2
 	storyteller_slot_default_cap = 2
 	storyteller_maxcaps = list(/datum/storyteller/gamemode/guaranteed_antag = 2, /datum/storyteller/gamemode/guaranteed_antag/low_wretch = 3)
