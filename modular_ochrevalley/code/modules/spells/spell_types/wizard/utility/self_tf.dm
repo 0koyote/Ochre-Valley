@@ -49,7 +49,10 @@
 		if(!the_item)
 			return FALSE
 		//Stuff we should *not* be allowed to TF into. (Micros and touch spells)
-		if(istype(the_item, /obj/item/holder/micro) || istype(the_item, /obj/item/melee/new_touch_attack) || istype(the_item, /obj/item/melee/touch_attack))
+		if(istype(the_item, /obj/item/holder/micro) || istype(the_item, /obj/item/melee/new_touch_attack) || istype(the_item, /obj/item/melee/touch_attack) || istype(the_item, /obj/item/handmirror/magic))
+			return FALSE
+		var/datum/compopnent/conjured_item/isConjured = the_item.GetComponent(/datum/component/conjured_item)
+		if(isConjured)
 			return FALSE
 		if(tgui_alert(H, "Are you certain you'd like to transform into [the_item]?", "Become Entrapped",list("No","Yes")) == "No")
 			return FALSE
