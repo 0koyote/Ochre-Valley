@@ -15,5 +15,5 @@
 // lowpop_tick at THRESHOLD). At/above THRESHOLD: ramps on to highpop_tick by REF_POP instead of
 // snapping straight to it, so there's no jump at the THRESHOLD boundary.
 #define THREAT_LOWPOP_TICK_MIN_MULT 0.5
-#define THREAT_LOWPOP_THRESHOLD 30
-#define THREAT_TICK_HIGHPOP_REF_POP 60
+#define THREAT_LOWPOP_THRESHOLD 10 //30 //OV EDIT
+#define THREAT_TICK_HIGHPOP_REF_POP 30 //60 //OV EDIT
