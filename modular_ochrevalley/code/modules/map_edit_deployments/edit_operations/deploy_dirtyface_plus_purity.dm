@@ -9,7 +9,7 @@
 				"density" = FALSE,
 				"x" = 71,
 				"y" = 45,
-				"z" = 1
+				"z" = 1,
 			),
 			list(
 				"type" = /obj/structure/roguemachine/goldface/public/toys,
@@ -17,7 +17,7 @@
 				"density" = FALSE,
 				"x" = 68,
 				"y" = 43,
-				"z" = 1
+				"z" = 1,
 			),
 		),
 	)

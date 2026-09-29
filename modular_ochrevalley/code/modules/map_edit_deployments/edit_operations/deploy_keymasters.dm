@@ -7,7 +7,7 @@
 				"template" = "keymaster_stand_town_dun",
 				"x" = 128,
 				"y" = 56,
-				"z" = 2
+				"z" = 2,
 			)
 		),
 		"map_files/jagged_jaw" = list(
@@ -15,7 +15,7 @@
 				"template" = "keymaster_stand_town_jagged",
 				"x" = 178,
 				"y" = 183,
-				"z" = 3
+				"z" = 3,
 			)
 		),
 		"map_files/roguetest" = list(
@@ -23,7 +23,8 @@
 				"template" = "keymaster_stand_roguetest",
 				"x" = 14,
 				"y" = 46,
-				"z" = 1
+				"z" = 1,
+				"clear_all_z_of_deploy_zone" = TRUE,
 			)
 		),
 	)

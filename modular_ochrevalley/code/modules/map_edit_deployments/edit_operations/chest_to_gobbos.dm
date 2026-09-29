@@ -7,7 +7,7 @@
 				"template" = "chest_to_gobbos",
 				"x" = 66,
 				"y" = 134,
-				"z" = 1
+				"z" = 1,
 			)
 		),
 	)

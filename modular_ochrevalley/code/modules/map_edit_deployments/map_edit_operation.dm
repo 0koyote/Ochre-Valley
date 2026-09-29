@@ -97,6 +97,7 @@
 	- `"x"` - X coordinate WITHIN THE MAP BOUNDS at which to deploy the template (AKA, the Z coordinate to deploy it relative to the map itself. Z 1 is the bottommost z-level of the current map, 2 is the 2nd from the bottom, etc.)
 	- `"y"` - Y coordinate
 	- `"z"` - Z coordinate
+	- `"clear_all_z_of_deploy_zone"` - Normally template deployments only clear the bottommost Z-level of the template's designated zone of mobs and objects before deploying the template. Set this as `TRUE` in the data if you need it to clear all objects and mobs of every z-level in the template's deployment zone.
 
 	With this, We can choose to deploy any number of templates at given coordinates on particular maps.
 	#### Example:
@@ -143,12 +144,19 @@
 	var/template_id = L["template"]
 	if(!template_id)
 		return FALSE
+	var/clear_all_z_of_deploy_zone = L["clear_all_z_of_deploy_zone"] || FALSE
 	var/datum/map_template/M = SSmapping.map_templates[template_id]
 	if(!M)
 		return FALSE
 	// We have our template and our coordinates. Clear 'em out
-	// Just do it for the bottommost Z-level of the template, anything more is overkill and unnecessary
-	clear_area(target_x, target_y, target_x + M.width-1, target_y + M.height-1, target_z)
+	if(!clear_all_z_of_deploy_zone)
+		// Just do it for the bottommost Z-level of the template, anything more is overkill and unnecessary
+		clear_area(target_x, target_y, target_x + M.width-1, target_y + M.height-1, target_z)
+	else
+		// Unless we do actually want that...
+		for(var/floor in target_z to (target_z + M.floors - 1))
+			clear_area(target_x, target_y, target_x + M.width-1, target_y + M.height-1, floor)
+
 	// With all that cleared out, deploy it!
 	var/turf/target = locate(target_x, target_y, target_z)
 	if(!target)
@@ -187,7 +195,7 @@
 	*/
 	var/list/spawntypes_by_mappath = alist()
 	/**
-	Similar to `spawntypes_by_mappath`, but instead contains a list of nested associated lists that it always deploys onto the wretch coast - IF we can locate it.
+	Similar to `spawntypes_by_mappath`, but instead contains a list of nested associated lists that it always deploys onto the wretch coast - IF we can locate it. also allows you to pre-determine the pixel_x, pixel_y, and density of something spawned (optionally).
 	#### Example:
 	```DreamMaker
 	spawntypes_by_mappath_wretchcoast = list(

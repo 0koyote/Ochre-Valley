@@ -7,7 +7,7 @@
 				"template" = "dun_wildsoul_cave",
 				"x" = 155,
 				"y" = 351,
-				"z" = 4
+				"z" = 4,
 			)
 		),
 	)
@@ -21,25 +21,25 @@
 				"type" = /obj/effect/landmark/start/wildsoullate,
 				"x" = 148,
 				"y" = 288,
-				"z" = 4
+				"z" = 4,
 			),
 			list(
 				"type" = /obj/effect/landmark/start/wildsoullate,
 				"x" = 149,
 				"y" = 288,
-				"z" = 4
+				"z" = 4,
 			),
 			list(
 				"type" = /obj/effect/landmark/start/wildsoullate,
 				"x" = 150,
 				"y" = 288,
-				"z" = 4
+				"z" = 4,
 			),
 			list(
 				"type" = /obj/effect/landmark/start/wildsoullate,
 				"x" = 151,
 				"y" = 288,
-				"z" = 4
+				"z" = 4,
 			),
 		),
 	)

@@ -8,21 +8,21 @@
 				"name" = "vore reformation portal - Beach",
 				"x" = 196,
 				"y" = 137,
-				"z" = 1
+				"z" = 1,
 			),
 			list(
 				"type" = /obj/structure/respawn_portal/permanent,
 				"name" = "vore reformation portal - Druid's Grove",
 				"x" = 12,
 				"y" = 78,
-				"z" = 2
+				"z" = 2,
 			),
 			list(
 				"type" = /obj/structure/respawn_portal/permanent,
 				"name" = "vore reformation portal - Eoran Pond",
 				"x" = 154,
 				"y" = 151,
-				"z" = 4
+				"z" = 4,
 			),
 		),
 		"map_files/jagged_jaw" = list(
@@ -31,21 +31,21 @@
 				"name" = "vore reformation portal - Beach",
 				"x" = 116,
 				"y" = 25,
-				"z" = 2
+				"z" = 2,
 			),
 			list(
 				"type" = /obj/structure/respawn_portal/permanent,
 				"name" = "vore reformation portal - Town Fairy Pond",
 				"x" = 218,
 				"y" = 80,
-				"z" = 3
+				"z" = 3,
 			),
 			list(
 				"type" = /obj/structure/respawn_portal/permanent,
 				"name" = "vore reformation portal - South of Town",
 				"x" = 142,
 				"y" = 33,
-				"z" = 3
+				"z" = 3,
 			),
 		),
 	)
