@@ -20,4 +20,22 @@
 				"z" = 1,
 			),
 		),
+		"map_files/jagged_jaw" = list(
+			list(
+				"type" = /obj/structure/roguemachine/bathvend/public,
+				"pixel_y" = -32,
+				"density" = FALSE,
+				"x" = 156,
+				"y" = 145,
+				"z" = 2,
+			),
+			list(
+				"type" = /obj/structure/roguemachine/goldface/public/toys,
+				"pixel_y" = 32,
+				"density" = FALSE,
+				"x" = 157,
+				"y" = 147,
+				"z" = 2,
+			),
+		),
 	)
