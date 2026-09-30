@@ -201,6 +201,7 @@ GLOBAL_LIST_INIT(wanderer_positions, list( //Homeless
 	"Adventurer",
 	"Court Agent",
 	"Trader",
+	"Lamplighter",
 	"Wild Soul", //caustic edit
 ))
 
