@@ -12,6 +12,8 @@
 
 /datum/intent/shoot/arquebus
     chargedrain = 0
+	hold_grace = 0
+	hold_ramp = 0
 
 /datum/intent/shoot/arquebus/prewarning()
 	if(masteritem && mastermob)
@@ -33,6 +35,8 @@
 /datum/intent/arc/arquebus
 	chargetime = 1
 	chargedrain = 0
+	hold_grace = 0
+	hold_ramp = 0
 
 /datum/intent/arc/arquebus/prewarning()
 	if(masteritem && mastermob)
