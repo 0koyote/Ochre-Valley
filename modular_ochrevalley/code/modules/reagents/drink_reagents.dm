@@ -225,7 +225,7 @@
 	reagent_state = LIQUID
 	color = "#663854" // This will put hair on your chest colour
 	taste_description = "smooth, intense bitterness"
-	quality = DRINK_GOOD
+
 
 /datum/reagent/consumable/eorasgracetea
 	name = "Eora's Grace"
@@ -233,7 +233,7 @@
 	reagent_state = LIQUID
 	color = "#fbaed2"
 	taste_description = "fruity herbaceousness"
-	quality = DRINK_NICE
+
 
 /datum/reagent/consumable/eorasgracetea/on_mob_life(mob/living/carbon/M) //Just the same as rose tea. Both herb-based, and calendula's the health one.
 	. = ..()
@@ -258,7 +258,7 @@
 	reagent_state = LIQUID
 	color = "#fba0e3"
 	taste_description = "saccharine fruitiness"
-	quality = DRINK_GOOD
+
 
 /datum/reagent/consumable/eorasloveteafake/on_mob_life(mob/living/carbon/M)
 	. = ..()
@@ -436,7 +436,7 @@ You see the sky from a pit and a palace both."))
 	reagent_state = LIQUID
 	color = "#b78727"
 	taste_description = "peppery-sweet grassiness"
-	quality = 2
+
 
 /datum/reagent/consumable/caffeine/chai/on_mob_life(mob/living/carbon/M)
 	. = ..()
