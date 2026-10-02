@@ -3,6 +3,7 @@
 	var/quality = 0 //So these show up nicer on the favorite list, and we can integrate it if upstream ever uses this variable
 
 /datum/reagent/water/bufftea
+	drink_type = DRINKTYPE_CAFFEINE
 	description = ""
 	reagent_state = LIQUID
 	quality = DRINK_NICE
@@ -28,6 +29,7 @@
 	alpha = 173
 
 /datum/reagent/water/bufftea/minttea
+	cuisine = CUISINE_ETRUSCAN
 	name = "Mint Tea"
 	description = "Steeped minthra. Etruscans love this stuff before going out for courting."
 	reagent_state = LIQUID
@@ -59,6 +61,8 @@
 			M.add_stress(/datum/stressevent/bittertea)
 
 /datum/reagent/water/sagetea
+	cuisine = CUISINE_NORTH_IMPERIAL
+	drink_type = DRINKTYPE_CAFFEINE
 	name = "Sage Tea"
 	description = "A pungent flavour, but favoured by Grenzelhoftian grandmothers to cure the sniffles."
 	reagent_state = LIQUID
@@ -69,6 +73,8 @@
 	alpha = 173
 
 /datum/reagent/water/valeriantea
+	cuisine = CUISINE_SOUTH_IMPERIAL
+	drink_type = DRINKTYPE_CAFFEINE
 	name = "Valerian Tea"
 	description = "Most people don’t drink this for its taste, but because it is reputed to ward off nightmares."
 	reagent_state = LIQUID
@@ -98,6 +104,7 @@
 			M.adjustToxLoss(2.5) //A bit stronger than berry poison. Will put you into crit with a sip.
 
 /datum/reagent/water/bufftea/eyebrighttea
+	cuisine = CUISINE_SOUTH_IMPERIAL
 	name = "Euphrasia Tea"
 	description = "Old people drink this to keep their eyes sharp. Some say elves distill its oil for a better effect."
 	reagent_state = LIQUID
@@ -111,6 +118,8 @@
 	return ..()
 
 /datum/reagent/consumable/caffeine/bloomtea
+	cuisine = CUISINE_NORTH_IMPERIAL|CUISINE_NORTHERN
+	drink_type = DRINKTYPE_CAFFEINE
 	name = "Bloom Tea"
 	description = "The drink of choice of the Celestial Academy, reputed to recover magical fatigue. Everyone knows they just like the pretty, deep blue colour."
 	reagent_state = LIQUID
@@ -120,6 +129,8 @@
 	metabolization_rate = REAGENTS_METABOLISM
 
 /datum/reagent/water/eorantea
+	cuisine = CUISINE_OTAVAIS|CUISINE_ETRUSCAN
+	drink_type = DRINKTYPE_CAFFEINE
 	name = "Eoran Tea"
 	description = "Every child from Gronn to Naledi knows - if you are sick, drink this. You will feel better. At least that is what parents insist on."
 	reagent_state = LIQUID
@@ -155,6 +166,7 @@
 	M.add_nausea(1) //Makes you sort of sick.
 
 /datum/reagent/water/bufftea/psytea
+	cuisine = CUISINE_OTAVAIS|CUISINE_RANESHENI //Change CUISINE_RANESHENI for Naledi once implemented
 	name = "Pilgrim Tea"
 	description = "A favourite among psydonic pilgrims, the hardy plant makes for a surprisingly palatable tea."
 	reagent_state = LIQUID
@@ -179,6 +191,8 @@
 	return ..()
 
 /datum/reagent/water/nettletea
+	cuisine = CUISINE_NORTH_IMPERIAL|CUISINE_NORTHERN
+	drink_type = DRINKTYPE_CAFFEINE
 	name = "Nettle Tea"
 	description = "Drunk by soldiers who want to freshen up their water rations in the field."
 	reagent_state = LIQUID
@@ -187,6 +201,8 @@
 	overdose_threshold = 0
 
 /datum/reagent/water/chamomiletea
+	cuisine = CUISINE_NORTH_IMPERIAL|CUISINE_SOUTH_IMPERIAL|CUISINE_NORTHERN|CUISINE_ETRUSCAN
+	drink_type = DRINKTYPE_CAFFEINE
 	name = "Chamomile Tea"
 	description = "9 out of 10 barber-surgeons prescribe this for tooth aches. The last one just pulls it out."
 	reagent_state = LIQUID
@@ -197,6 +213,8 @@
 //New blends:
 
 /datum/reagent/consumable/caffeine/raneshenbitter
+	cuisine = CUISINE_RANESHENI
+	drink_type = DRINKTYPE_CAFFEINE
 	name = "Raneshen Bitter Tea"
 	description = "Dark and foreboding, a bitter reminder of the loss of PSYDON, to be followed by sweet exaltation of HIS sacrifice."
 	reagent_state = LIQUID
@@ -227,6 +245,8 @@
 				M.update_damage_overlays()
 
 /datum/reagent/water/eorasloveteafake
+	cuisine = CUISINE_SOUTH_IMPERIAL|CUISINE_OTAVAIS
+	drink_type = DRINKTYPE_CAFFEINE
 	name = "Faked Eora's Love"
 	description = "A testament that humankind can never reach the perfection of the gods. Is this love? Or just a really sweet tea?"
 	reagent_state = LIQUID
@@ -249,6 +269,8 @@
 				M.update_damage_overlays()
 
 /datum/reagent/water/eorasloveteatrue
+	cuisine = CUISINE_NORTH_IMPERIAL|CUISINE_SOUTH_IMPERIAL|CUISINE_OTAVAIS|CUISINE_NORTHERN|CUISINE_ETRUSCAN|CUISINE_SOUTHEASTERN|CUISINE_RANESHENI //Add naledi cuisine when implemented
+	drink_type = DRINKTYPE_CAFFEINE
 	name = "Eora's Love"
 	description = "Humenkind cannot love like the gods, but they do not need to. They have each other and this bond is Eora's most cherished fact of the world."
 	reagent_state = LIQUID
@@ -271,6 +293,8 @@
 				M.update_damage_overlays()
 
 /datum/reagent/consumable/caffeine/ravoxtea
+	cuisine = CUISINE_ETRUSCAN
+	drink_type = DRINKTYPE_CAFFEINE
 	name = "Ravox's Calm"
 	description = "Brew this and drink deep. Feel the focus. Draw your blade with an unclouded mind and let justice speak where mercy was ignored."
 	reagent_state = LIQUID
@@ -283,6 +307,8 @@
 	M.apply_status_effect(/datum/status_effect/buff/tea/constitutiontea)
 
 /datum/reagent/consumable/caffeine/mocha
+	cuisine = CUISINE_RANESHENI //Add naledi cuisine when implemented
+	drink_type = DRINKTYPE_CAFFEINE
 	name = "Sand Coffee"
 	description = "I make this pot in the name of the Allfather, stranger. Sit down and drink. As long the brew remains, we shall be brothers. When it is empty, we will depart and maybe see each other again."
 	reagent_state = LIQUID
@@ -305,6 +331,8 @@
 				M.update_damage_overlays()
 
 /datum/reagent/water/gerevine
+	cuisine = CUISINE_OTAVAIS
+	drink_type = DRINKTYPE_CAFFEINE
 	name = "Gerevine Brew"
 	description = "It is said that this drink was the first offered to the Saints, when they descended and walked among the faithful. They wept, for it reminded them of the Allfather."
 	reagent_state = LIQUID
@@ -327,6 +355,8 @@
 	M.apply_status_effect(/datum/status_effect/buff/tea/willpowertea)
 
 /datum/reagent/consumable/caffeine/schorle
+	cuisine = CUISINE_NORTH_IMPERIAL
+	drink_type = DRINKTYPE_CAFFEINE
 	name = "Apfelschorle"
 	description = "Come! Watch me drink the orchard's finest nectar! Ah, lyfe can be so wonderful."
 	reagent_state = LIQUID
@@ -394,6 +424,8 @@ You see the sky from a pit and a palace both."))
 				M.update_damage_overlays()
 
 /datum/reagent/consumable/caffeine/chai
+	cuisine = CUISINE_SOUTHEASTERN|CUISINE_RANESHENI
+	drink_type = DRINKTYPE_CAFFEINE
 	name = "Chai"
 	description = "And on we march to unite the Isles. Gleaming naginatas clash against wicker shields and in the nite we drink Aisata's favoured tea."
 	reagent_state = LIQUID
@@ -416,6 +448,8 @@ You see the sky from a pit and a palace both."))
 				M.update_damage_overlays()
 
 /datum/reagent/water/volfmilk
+	cuisine = CUISINE_NORTHERN
+	drink_type = DRINKTYPE_JUICE
 	name = "Vargmjölk"
 	description = "And we ring the fire, backs turned in snide to the cold. Volf-skinned, we thank you for snatching this brew from the teats of the world…"
 	reagent_state = LIQUID
@@ -423,6 +457,8 @@ You see the sky from a pit and a palace both."))
 	taste_description = "warm, fruity sweetness"
 
 /datum/reagent/water/icetea
+	cuisine = CUISINE_NORTHERN
+	drink_type = DRINKTYPE_JUICE
 	name = "Fruktte"
 	description = "And in the mountains we tear the frozen tears of the moose, for we do not lose ourselves in bloodshed yet like it wants us to. Instead, we enjoy a good cup with friends and clan."
 	reagent_state = LIQUID
@@ -430,6 +466,8 @@ You see the sky from a pit and a palace both."))
 	taste_description = "cooled fruitiness"
 
 /datum/reagent/water/barleytea
+	cuisine = CUISINE_NORTH_IMPERIAL
+	drink_type = DRINKTYPE_CAFFEINE
 	name = "Barley Tea" //Technically this is an asian drink but fuck it, I love the idea.
 	description = "Reality is a state of mind caused by the chronic lack of alcohol in the humours. This won't fix it, but at least it whets the tongue, lad."
 	reagent_state = LIQUID
@@ -437,6 +475,8 @@ You see the sky from a pit and a palace both."))
 	taste_description = "toasty bitterness"
 
 /datum/reagent/water/kvass
+	cuisine = CUISINE_SOUTH_IMPERIAL
+	drink_type = DRINKTYPE_CAFFEINE
 	name = "Kvass" //Bread soder…
 	description = "Tis the bread we drink. Mount the saigas then and let us ride. For the steppe waits for no one and our forefather gave us this so we don't have to chew our meal."
 	reagent_state = LIQUID
@@ -444,6 +484,8 @@ You see the sky from a pit and a palace both."))
 	taste_description = "astringent-sweet cereals"
 
 /datum/reagent/water/avantare
+	cuisine = CUISINE_ETRUSCAN
+	drink_type = DRINKTYPE_CAFFEINE
 	name = "Avantare" //Just made up.
 	description = "Furl the sails, take down the mizzenmast. Drink our Avantare and hug your wife. We are home, finally home again."
 	reagent_state = LIQUID
