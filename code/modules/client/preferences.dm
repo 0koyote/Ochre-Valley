@@ -74,6 +74,8 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/shake = TRUE
 	var/sexable = FALSE
 	var/compliance_notifs = TRUE
+	/// Extra chances for rolling if you've lost before. Max 2
+	var/roll_tokens = 0
 	var/hide_pq = FALSE //OV ADD
 
 	//Job preferences 2.0 - indexed by job title , no key or value implies never

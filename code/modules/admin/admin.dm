@@ -91,9 +91,11 @@
 		//OV edit
 		if(!same_user || !M.client.prefs.hide_pq) //If you are looking at yourself and don't want to see PQ, hide this
 			body += "<br><br>Player Quality: [pq] ([pq_num])"
+			//body += "<br>Roll Tokens: [M.client.prefs.roll_tokens]/[MAX_ROLL_TOKENS]"
 			body += "<br><a href='?_src_=holder;[HrefToken()];editpq=add;mob=[REF(M)]'>\[Modify PQ\]</a> "
 			body += "<a href='?_src_=holder;[HrefToken()];showpq=add;mob=[REF(M)]'>\[Check PQ\]</a> "
 		//OV edit end
+		body += "<br>Roll Tokens: [M.client.prefs.roll_tokens]/[MAX_ROLL_TOKENS]" //OV EDIT - Moved down here to avoid false checks
 		body += "<br><a href='?_src_=holder;[HrefToken()];edittriumphs=add;mob=[REF(M)]'>\[Modify Triumphs\]</a> "
 		body += "<br>"
 		body += "<a href='?_src_=holder;[HrefToken()];roleban=add;mob=[REF(M)]'>\[Role Ban Panel\]</a> "
