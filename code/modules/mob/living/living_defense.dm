@@ -335,7 +335,7 @@
 			return FALSE
 	//ov edit end
 	//Caustic Edit End
-	
+
 	if(istype(AM, /obj/item))
 		var/obj/item/I = AM
 		// Hit the selected zone, or else a random zone centered on the chest
@@ -675,10 +675,10 @@
 
 //called when the mob receives a bright flash
 /mob/living/proc/flash_act(intensity = 1, override_blindness_check = 0, affect_silicon = 0, visual = 0, type = /atom/movable/screen/fullscreen/flash)
+	//OV ADD START
 	if(check_epilepsy())
 		return FALSE
-	if(HAS_TRAIT(src, TRAIT_NOFLASH))
-		return FALSE
+	//OV ADD END
 	if(get_eye_protection() < intensity && (override_blindness_check || !(HAS_TRAIT(src, TRAIT_BLIND))))
 		overlay_fullscreen("flash", type)
 		addtimer(CALLBACK(src, PROC_REF(clear_fullscreen), "flash", 25), 25)
