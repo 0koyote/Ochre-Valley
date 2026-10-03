@@ -238,7 +238,7 @@
 	if(!pass_flying || !isliving(mover))
 		return FALSE
 	var/mob/living/L = mover
-	return (L.movement_type & FLYING) && L.mob_size <= MOB_SIZE_SMALL
+	return (L.movement_type & FLYING) && L.mob_size <= MOB_SMALL //OV EDIT
 
 /obj/structure/fluff/railing/OnCrafted(dirin)
 	. = ..()
