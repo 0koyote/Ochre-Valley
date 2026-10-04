@@ -1,0 +1,4 @@
+author: "NickBelmont"
+delete-after: True
+changes:
+  - bugfix: "Subtles now work properly while item-tfed."
