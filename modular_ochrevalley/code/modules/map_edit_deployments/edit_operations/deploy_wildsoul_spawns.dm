@@ -5,8 +5,8 @@
 		"map_files/ovdun_world" = list(
 			list(
 				"template" = "dun_wildsoul_cave",
-				"x" = 155,
-				"y" = 351,
+				"x" = 176,
+				"y" = 356,
 				"z" = 4,
 			)
 		),
