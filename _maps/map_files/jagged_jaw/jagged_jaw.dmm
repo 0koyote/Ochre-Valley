@@ -129786,6 +129786,14 @@
 /obj/structure/chair/stool/rogue,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/town/garrison/grim)
+"pOz" = (
+/obj/structure/mineral_door/wood/violet{
+	locked = 1;
+	lockid = "keeper2";
+	name = "Pestra's Sanctum"
+	},
+/turf/open/floor/rogue/concrete,
+/area/rogue/indoors/town/pestra_sanctum/grim)
 "pOA" = (
 /obj/structure/closet/crate/coffin,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/tools,
@@ -380857,7 +380865,7 @@ bsm
 bsm
 bsm
 bsm
-gVt
+pOz
 ppx
 ppx
 gVt

@@ -14418,7 +14418,7 @@
 "cCw" = (
 /obj/structure/mineral_door/wood/violet{
 	name = "Sanctum of Pestra";
-	lockid = "keeper";
+	lockid = "keeper2";
 	locked = 1
 	},
 /turf/open/floor/rogue/tile,
@@ -43381,7 +43381,7 @@
 "hJV" = (
 /obj/structure/mineral_door/wood/violet{
 	name = "Sanctum of Pestra";
-	lockid = "keeper";
+	lockid = "keeper2";
 	locked = 1
 	},
 /turf/open/floor/rogue/concrete,
@@ -92989,7 +92989,7 @@
 "qhV" = (
 /obj/structure/mineral_door/bars{
 	locked = 1;
-	lockid = "keeper"
+	lockid = "keeper2"
 	},
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/indoors/town/pestra_sanctum)
