@@ -22491,7 +22491,7 @@
 /obj/structure/stairs/fancy/l{
 	dir = 1
 	},
-/mob/living/carbon/human/species/human/northern/highwayman/dk_goon,
+/mob/living/carbon/human/species/human/northern/deranged_knight/matthios,
 /turf/open/floor/rogue/carpet/lord/left,
 /area/rogue/under/cave/scarymaze)
 "dYX" = (
@@ -40850,7 +40850,9 @@
 /obj/structure/table/wood,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/remains/human,
-/obj/item/clothing/head/roguetown/crown/fakecrown,
+/obj/item/clothing/neck/roguetown/psicross/inhumen/aalloy,
+/obj/item/roguegem/random,
+/obj/item/roguegem/random,
 /turf/open/floor/rogue/carpet/lord/left,
 /area/rogue/under/cave/dukecourt)
 "hkB" = (
@@ -42001,6 +42003,11 @@
 "hwl" = (
 /turf/open/floor/rogue/metal/barograte/open,
 /area/rogue/under/underdark/north)
+"hwt" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/rogue/carpet/lord/center,
+/area/rogue/under/cave/dukecourt)
 "hwB" = (
 /obj/structure/flora/hotspring_rocks/small/three,
 /turf/open/floor/rogue/naturalstone,
@@ -60837,7 +60844,7 @@
 	pixel_y = -6
 	},
 /obj/effect/spawner/lootdrop/valuable_tableware_spawner,
-/mob/living/carbon/human/species/human/northern/highwayman/dk_goon,
+/mob/living/carbon/human/species/human/northern/deranged_knight/matthios,
 /turf/open/floor/rogue/churchrough,
 /area/rogue/under/cave/scarymaze)
 "kJD" = (
@@ -64929,7 +64936,7 @@
 /obj/structure/stairs/fancy/r{
 	dir = 1
 	},
-/mob/living/carbon/human/species/human/northern/highwayman/dk_goon,
+/mob/living/carbon/human/species/human/northern/deranged_knight/matthios,
 /turf/open/floor/rogue/carpet/lord/right,
 /area/rogue/under/cave/scarymaze)
 "lrm" = (
@@ -88958,7 +88965,7 @@
 	pixel_x = 9;
 	pixel_y = -3
 	},
-/mob/living/carbon/human/species/human/northern/highwayman/dk_goon,
+/mob/living/carbon/human/species/human/northern/deranged_knight/matthios,
 /turf/open/floor/rogue/churchrough,
 /area/rogue/under/cave/scarymaze)
 "pyN" = (
@@ -100015,12 +100022,12 @@
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave)
 "rva" = (
-/mob/living/carbon/human/species/skeleton/npc/no_equipment,
-/obj/structure/fluff/walldeco/chains,
-/obj/item/ash,
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/remains/human,
 /obj/structure/chair/wood/rogue/throne,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/item/ash,
+/obj/effect/decal/remains/human,
+/obj/structure/fluff/walldeco/chains,
+/mob/living/carbon/human/species/skeleton/npc/fallenduke,
 /turf/open/floor/rogue/carpet/lord/center,
 /area/rogue/under/cave/dukecourt)
 "rvc" = (
@@ -101414,7 +101421,11 @@
 "rHq" = (
 /obj/structure/table/wood,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/item/rogueweapon/sword/rapier/lord,
+/obj/item/reagent_containers/glass/cup/golden{
+	pixel_x = -8
+	},
+/obj/effect/spawner/lootdrop/valuable_jewelry_spawner,
+/obj/effect/spawner/lootdrop/general_loot_hi,
 /turf/open/floor/rogue/carpet/lord/right,
 /area/rogue/under/cave/dukecourt)
 "rHr" = (
@@ -319389,7 +319400,7 @@ ujm
 mjA
 fzX
 rva
-sKj
+hwt
 jPJ
 sKj
 sKj
