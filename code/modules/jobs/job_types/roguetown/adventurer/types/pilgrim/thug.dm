@@ -78,6 +78,23 @@
 			r_hand = /obj/effect/spawner/lootdrop/roguetown/dungeon/weapons
 	if(H.mind)
 		SStreasury.grant_savings(ECONOMIC_LOWER_CLASS, H)
+	var/prefixs = list(
+		"Skinny" = "Skinny",
+		"Fat" = "Fat",
+		"Big" = "Big", // Yes, There is two cases where if someone calls themselves "Boss", we need to explode them.
+		"Small" = "Small",
+		"Huge" = "Huge",
+		"Little" = "Little",
+		"Thick" = "Thick",
+		"Thin" = "Thin",
+		"Long" = "Long",
+		"Short" = "Short",
+		"Wide" = "Wide",
+		"Slug" = "Slug",
+		"Molasses" = "Molasses",
+		"Stony" = "Stony",
+		"Quick" = "Quick"
+		)
 	var/prefixchoice = input(H, "What did people start calling you.", "YOU GOON") as anything in prefixs
 	var/prev_real_name = H.real_name
 	var/prev_name = H.name
@@ -154,6 +171,23 @@
 			r_hand = /obj/item/lockpickring/mundane
 	if(H.mind)
 		SStreasury.grant_savings(ECONOMIC_LOWER_CLASS, H)
+	var/prefixs = list(
+		"Skinny" = "Skinny",
+		"Fat" = "Fat",
+		"Big" = "Big", // Yes, There is two cases where if someone calls themselves "Boss", we need to explode them.
+		"Small" = "Small",
+		"Huge" = "Huge",
+		"Little" = "Little",
+		"Thick" = "Thick",
+		"Thin" = "Thin",
+		"Long" = "Long",
+		"Short" = "Short",
+		"Wide" = "Wide",
+		"Slug" = "Slug",
+		"Molasses" = "Molasses",
+		"Stony" = "Stony",
+		"Quick" = "Quick"
+		)
 	var/prefixchoice = input(H, "What did people start calling you.", "YOU WISE FELLA") as anything in prefixs
 	var/prev_real_name = H.real_name
 	var/prev_name = H.name
