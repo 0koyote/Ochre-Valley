@@ -78,6 +78,7 @@
 			r_hand = /obj/effect/spawner/lootdrop/roguetown/dungeon/weapons
 	if(H.mind)
 		SStreasury.grant_savings(ECONOMIC_LOWER_CLASS, H)
+#OV Edit
 	var/prefixs = list(
 		"Skinny" = "Skinny",
 		"Fat" = "Fat",
@@ -101,6 +102,7 @@
 	var/prefix = prefixs[prefixchoice]
 	H.real_name = "[prefix] [prev_real_name]"
 	H.name = "[prefix] [prev_name]"
+#OV Edit end. 
 /datum/advclass/thug/wiseguy
 	name = "Wise Guy"
 	tutorial = "You're smarter than the rest, by a stone's throw - and you know better than to get up close and personal. Unlike most others, you can read."
@@ -171,6 +173,7 @@
 			r_hand = /obj/item/lockpickring/mundane
 	if(H.mind)
 		SStreasury.grant_savings(ECONOMIC_LOWER_CLASS, H)
+#OV Edit
 	var/prefixs = list(
 		"Skinny" = "Skinny",
 		"Fat" = "Fat",
@@ -194,7 +197,7 @@
 	var/prefix = prefixs[prefixchoice]
 	H.real_name = "[prefix] [prev_real_name]"
 	H.name = "[prefix] [prev_name]"
-
+#OV Edit end.
 /datum/advclass/thug/bigman
 	name = "Big Fella"
 	tutorial = "More akin to a cabbage-fed monster than a normal person, your size and strength are your greatest weapons; though they hardly supplement what's missing of your brains."
