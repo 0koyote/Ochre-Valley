@@ -757,7 +757,7 @@
 	// why is a book crafting kit using the craft system, but crafting a book isn't? Well the crafting system for *some reason* is made in such a way as to make reworking it to allow you to put reqs vars in the crafted item near *impossible.*
 	if(istype(I, /obj/item/book_crafting_kit))
 		qdel(I)
-		var/obj/item/book/rogue/playerbook/PB = new /obj/item/book/rogue/playerbook(get_turf(loc), TRUE, user, compiled_pages)
+		var/obj/item/book/rogue/playerbook/PB = new /obj/item/book/rogue/playerbook(loc, get_turf(loc), TRUE, user, compiled_pages) //OV Edit: Make bookbinding work!
 		if(user.Adjacent(PB))
 			PB.add_fingerprint(user)
 			user.put_in_hands(PB)
