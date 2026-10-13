@@ -94,15 +94,19 @@
 		"Slug" = "Slug",
 		"Molasses" = "Molasses",
 		"Stony" = "Stony",
-		"Quick" = "Quick"
+		"Quick" = "Quick",
+		"None" = ""
 		)
 	var/prefixchoice = input(H, "What did people start calling you.", "YOU GOON") as anything in prefixs
 	var/prev_real_name = H.real_name
 	var/prev_name = H.name
 	var/prefix = prefixs[prefixchoice]
-	H.real_name = "[prefix] [prev_real_name]"
-	H.name = "[prefix] [prev_name]"
-///OV edit end 
+	// check if they already have it to avoid stacking titles
+	if(findtextEx(H.real_name, "[prefix] ") == 0)
+		H.real_name = "[prefix] [prev_real_name]"
+		H.name = "[prefix] [prev_name]"
+
+///OV edit end
 /datum/advclass/thug/wiseguy
 	name = "Wise Guy"
 	tutorial = "You're smarter than the rest, by a stone's throw - and you know better than to get up close and personal. Unlike most others, you can read."
@@ -195,8 +199,11 @@
 	var/prev_real_name = H.real_name
 	var/prev_name = H.name
 	var/prefix = prefixs[prefixchoice]
-	H.real_name = "[prefix] [prev_real_name]"
-	H.name = "[prefix] [prev_name]"
+	// check if they already have it to avoid stacking titles
+	if(findtextEx(H.real_name, "[prefix] ") == 0)
+		H.real_name = "[prefix] [prev_real_name]"
+		H.name = "[prefix] [prev_name]"
+
 ///OV edit end.
 /datum/advclass/thug/bigman
 	name = "Big Fella"
@@ -283,5 +290,10 @@
 	var/prev_real_name = H.real_name
 	var/prev_name = H.name
 	var/prefix = prefixs[prefixchoice]
-	H.real_name = "[prefix] [prev_real_name]"
-	H.name = "[prefix] [prev_name]"
+	/// OV Edit
+	// check if they already have it to avoid stacking titles
+	if(findtextEx(H.real_name, "[prefix] ") == 0)
+		H.real_name = "[prefix] [prev_real_name]"
+		H.name = "[prefix] [prev_name]"
+
+/// OV Edit end.
