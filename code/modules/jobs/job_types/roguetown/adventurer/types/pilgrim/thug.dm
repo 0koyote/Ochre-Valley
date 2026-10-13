@@ -80,21 +80,21 @@
 		SStreasury.grant_savings(ECONOMIC_LOWER_CLASS, H)
 ///OV edit
 	var/prefixs = list(
-		"Skinny" = "Skinny",
-		"Fat" = "Fat",
-		"Big" = "Big", // Yes, There is two cases where if someone calls themselves "Boss", we need to explode them.
-		"Small" = "Small",
-		"Huge" = "Huge",
-		"Little" = "Little",
-		"Thick" = "Thick",
-		"Thin" = "Thin",
-		"Long" = "Long",
-		"Short" = "Short",
-		"Wide" = "Wide",
-		"Slug" = "Slug",
-		"Molasses" = "Molasses",
-		"Stony" = "Stony",
-		"Quick" = "Quick",
+		"Skinny" = "Skinny ",
+		"Fat" = "Fat ",
+		"Big" = "Big ", // Yes, There is two cases where if someone calls themselves "Boss", we need to explode them.
+		"Small" = "Small ",
+		"Huge" = "Huge ",
+		"Little" = "Little ",
+		"Thick" = "Thick ",
+		"Thin" = "Thin ",
+		"Long" = "Long ",
+		"Short" = "Short ",
+		"Wide" = "Wide ",
+		"Slug" = "Slug ",
+		"Molasses" = "Molasses ",
+		"Stony" = "Stony ",
+		"Quick" = "Quick ",
 		"None" = ""
 		)
 	var/prefixchoice = input(H, "What did people start calling you.", "YOU GOON") as anything in prefixs
@@ -102,10 +102,12 @@
 	var/prev_name = H.name
 	var/prefix = prefixs[prefixchoice]
 	// check if they already have it to avoid stacking titles
-	if(findtextEx(H.real_name, "[prefix] ") == 0)
-		H.real_name = "[prefix] [prev_real_name]"
-		H.name = "[prefix] [prev_name]"
-
+	if(findtextEx(H.real_name, "[prefix]") == 0)
+		H.real_name = "[prefix][prev_real_name]"
+		H.name = "[prefix][prev_name]"
+	if(findtextEx(H.real_name, "None") == 0)
+		H.real_name = "[prev_real_name]"
+		H.name = "[prev_name]"
 ///OV edit end
 /datum/advclass/thug/wiseguy
 	name = "Wise Guy"
@@ -179,21 +181,22 @@
 		SStreasury.grant_savings(ECONOMIC_LOWER_CLASS, H)
 ///OV edit
 	var/prefixs = list(
-		"Skinny" = "Skinny",
-		"Fat" = "Fat",
-		"Big" = "Big", // Yes, There is two cases where if someone calls themselves "Boss", we need to explode them.
-		"Small" = "Small",
-		"Huge" = "Huge",
-		"Little" = "Little",
-		"Thick" = "Thick",
-		"Thin" = "Thin",
-		"Long" = "Long",
-		"Short" = "Short",
-		"Wide" = "Wide",
-		"Slug" = "Slug",
-		"Molasses" = "Molasses",
-		"Stony" = "Stony",
-		"Quick" = "Quick"
+		"Skinny" = "Skinny ",
+		"Fat" = "Fat ",
+		"Big" = "Big ", // Yes, There is two cases where if someone calls themselves "Boss", we need to explode them.
+		"Small" = "Small ",
+		"Huge" = "Huge ",
+		"Little" = "Little ",
+		"Thick" = "Thick ",
+		"Thin" = "Thin ",
+		"Long" = "Long ",
+		"Short" = "Short ",
+		"Wide" = "Wide ",
+		"Slug" = "Slug ",
+		"Molasses" = "Molasses ",
+		"Stony" = "Stony ",
+		"Quick" = "Quick ",
+		"None" = ""
 		)
 	var/prefixchoice = input(H, "What did people start calling you.", "YOU WISE FELLA") as anything in prefixs
 	var/prev_real_name = H.real_name
@@ -201,8 +204,8 @@
 	var/prefix = prefixs[prefixchoice]
 	// check if they already have it to avoid stacking titles
 	if(findtextEx(H.real_name, "[prefix] ") == 0)
-		H.real_name = "[prefix] [prev_real_name]"
-		H.name = "[prefix] [prev_name]"
+		H.real_name = "[prefix][prev_real_name]"
+		H.name = "[prefix][prev_name]"
 
 ///OV edit end.
 /datum/advclass/thug/bigman
@@ -270,21 +273,22 @@
 			backl = /obj/item/rogueweapon/scabbard/gwstrap //OV Add - Holds me axe nice
 
 	var/prefixs = list(
-		"Skinny" = "Skinny", // Why
-		"Fat" = "Fat",
-		"Big" = "Big", // Yes, There is two cases where if someone calls themselves "Boss", we need to explode them.
-		"Small" = "Small",
-		"Huge" = "Huge",
-		"Little" = "Little",
-		"Thick" = "Thick",
-		"Thin" = "Thin",
-		"Long" = "Long",
-		"Short" = "Short",
-		"Wide" = "Wide",
-		"Slug" = "Slug",
-		"Molasses" = "Molasses",
-		"Stony" = "Stony",
-		"Quick" = "Quick"
+		"Skinny" = "Skinny ", // Why
+		"Fat" = "Fat ",
+		"Big" = "Big ", // Yes, There is two cases where if someone calls themselves "Boss", we need to explode them.
+		"Small" = "Small ",
+		"Huge" = "Huge ",
+		"Little" = "Little ",
+		"Thick" = "Thick ",
+		"Thin" = "Thin ",
+		"Long" = "Long ",
+		"Short" = "Short ",
+		"Wide" = "Wide ",
+		"Slug" = "Slug ",
+		"Molasses" = "Molasses ",
+		"Stony" = "Stony ",
+		"Quick" = "Quick ",
+		"None" = ""
 		)
 	var/prefixchoice = input(H, "What did people start calling you.", "YOU BIG FELLA") as anything in prefixs
 	var/prev_real_name = H.real_name
@@ -293,7 +297,6 @@
 	/// OV Edit
 	// check if they already have it to avoid stacking titles
 	if(findtextEx(H.real_name, "[prefix] ") == 0)
-		H.real_name = "[prefix] [prev_real_name]"
-		H.name = "[prefix] [prev_name]"
-
+		H.real_name = "[prefix][prev_real_name]"
+		H.name = "[prefix][prev_name]"
 /// OV Edit end.
